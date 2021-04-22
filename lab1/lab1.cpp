@@ -1,15 +1,12 @@
 #include <windows.h>
-#include <string>
 #include <iostream>
-#include <sstream>
+#include <string>
 
 using namespace std;
 
 DWORD WINAPI ThreadProc(CONST LPVOID lpParam)
 {
-	stringstream ss;
-	ss << "Поток №" << *(int*)lpParam << " выполняет работу" << endl;
-	cout << ss.str();
+	cout << "Поток №" + to_string(*(int*)lpParam) + " выполняет работу \n";
 	ExitThread(0); // функция устанавливает код завершения потока в 0
 }
 
