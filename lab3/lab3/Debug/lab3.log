@@ -1,0 +1,4 @@
+﻿  lab3.cpp
+D:\Research-Data\PP\lab3\lab3\lab3.cpp(58,26): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Research-Data\PP\lab3\lab3\lab3.cpp(64,26): warning C4018: <: несоответствие типов со знаком и без знака
+  lab3.vcxproj -> D:\Research-Data\PP\lab3\Debug\lab3.exe
