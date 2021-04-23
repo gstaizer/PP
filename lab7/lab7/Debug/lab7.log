@@ -1,0 +1,4 @@
+﻿  lab7.cpp
+D:\Research-Data\PP\lab7\lab7\lab7.cpp(19,26): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Research-Data\PP\lab7\lab7\lab7.cpp(25,26): warning C4018: <: несоответствие типов со знаком и без знака
+  lab7.vcxproj -> D:\Research-Data\PP\lab7\Debug\lab7.exe
