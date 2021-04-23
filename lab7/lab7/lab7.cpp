@@ -15,12 +15,14 @@ int main(int argc, char* argv[])
 
     int threadCount = stoi(argv[1]);
 
+    //Создание потоков
     ITask** tasks = new ITask * [threadCount];
     for (size_t i = 0; i < threadCount; i++)
     {
         tasks[i] = new GetTask("Поток №" + to_string(i + 1) + " выполняет работу \n");
     }
 
+    //Запуск потоков
     ThreadHandler* handles = new ThreadHandler[threadCount];
     for (size_t i = 0; i < threadCount; i++)
     {
