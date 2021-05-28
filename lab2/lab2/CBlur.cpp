@@ -6,7 +6,6 @@ using namespace std;
 
 void BlurProc(ThreadInfo* thread, int startBlur, int endBlur)
 {
-	int blurRadius = 2;
 	int w = thread->inputImage.TellWidth();
 	int h = thread->inputImage.TellHeight();
 

@@ -1,4 +1,8 @@
-﻿  CBlur.cpp
-D:\Research-Data\PP\lab4\lab4\lab4\CBlur.cpp(104,20): warning C4018: <: несоответствие типов со знаком и без знака
-D:\Research-Data\PP\lab4\lab4\lab4\CBlur.cpp(119,20): warning C4018: <: несоответствие типов со знаком и без знака
-  lab4.vcxproj -> D:\Research-Data\PP\lab4\lab4\Debug\lab4.exe
+﻿  EasyBMP.cpp
+C:\Repositories\PP\lab4\easyBMP\EasyBMP.cpp(994,13): warning C4101: ZeroWORD: неиспользованная локальная переменная
+  CBlur.cpp
+C:\Repositories\PP\lab4\lab4\lab4\CBlur.cpp(76,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Repositories\PP\lab4\lab4\lab4\CBlur.cpp(91,20): warning C4018: <: несоответствие типов со знаком и без знака
+  main.cpp
+  Создание кода...
+  lab4.vcxproj -> C:\Repositories\PP\lab4\lab4\Debug\lab4.exe

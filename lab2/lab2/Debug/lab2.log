@@ -1,2 +1,6 @@
-﻿  CBlur.cpp
-  lab2.vcxproj -> D:\Research-Data\PP\lab2\Debug\lab2.exe
+﻿  EasyBMP.cpp
+C:\Repositories\PP\lab2\easyBMP\EasyBMP.cpp(994,13): warning C4101: ZeroWORD: неиспользованная локальная переменная
+  CBlur.cpp
+  main.cpp
+  Создание кода...
+  lab2.vcxproj -> C:\Repositories\PP\lab2\Debug\lab2.exe

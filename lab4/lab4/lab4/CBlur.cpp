@@ -7,8 +7,6 @@ using namespace std;
 
 void BlurProc(ThreadInfo* thread, int startBlur, int endBlur, clock_t startTime, ofstream& log)
 {
-	int blurRadius = 2;
-
 	int w = thread->inputImage.TellWidth();
 	int h = thread->inputImage.TellHeight();
 	vector<RGBApixel> pixels = {};
@@ -48,7 +46,7 @@ DWORD WINAPI ThreadProc(CONST LPVOID lpParam)
 	int threadIndex = thread->index;
 	clock_t startTime = thread->startTime;
 	ofstream log;
-	log.open("Thread#" + to_string(thread->index) + ".txt");
+	log.open("Thread " + to_string(thread->index) + ".txt");
 	int startBlurIndex = (height / threadCount) * (threadIndex - 1);
 	int endBlurIndex = (height / threadCount) * threadIndex;
 
@@ -58,7 +56,6 @@ DWORD WINAPI ThreadProc(CONST LPVOID lpParam)
 
 bool CBlur::isPrioritiesReaded()
 {
-	//----------
 	string threadPrioritiesLine = "";
 	string buff = "";
 	vector<string> threadPrioritiesString = {};
@@ -101,7 +98,6 @@ bool CBlur::isPrioritiesReaded()
 	}
 	m_threadPriorities = threadPrioritiesInt;
 	return true;
-	//----------
 }
 
 void CBlur::StarBluring(clock_t start) {
@@ -111,7 +107,6 @@ void CBlur::StarBluring(clock_t start) {
 	outputImage->ReadFromFile(m_inputImage);
 
 	if (!isPrioritiesReaded()) { exit(0); }
-	//--------------
 	vector<vector<RGBApixel>> pixels = {};
 	for (int i = 0; i < inputImage.TellWidth(); i++)
 	{
@@ -121,7 +116,6 @@ void CBlur::StarBluring(clock_t start) {
 			pixels.at(0).push_back(inputImage.GetPixel(i, j));
 		}
 	}
-	//-------------
 	cout << "Opened " << m_inputImage << endl;
 	cout << "Bluring..." << endl;
 	vector<ThreadInfo*> threads = {};
