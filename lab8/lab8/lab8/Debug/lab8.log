@@ -1,0 +1,12 @@
+﻿  EasyBMP.cpp
+d:\research-data\pp\lab8\easybmp\easybmp.cpp(994): warning C4101: ZeroWORD: неиспользованная локальная переменная
+  CBlur.cpp
+  CPool.cpp
+  CTask.cpp
+  main.cpp
+d:\research-data\pp\lab8\lab8\lab8\main.cpp(35): warning C4018: <: несоответствие типов со знаком и без знака
+d:\research-data\pp\lab8\lab8\lab8\main.cpp(50): warning C4018: <: несоответствие типов со знаком и без знака
+d:\research-data\pp\lab8\lab8\lab8\main.cpp(127): warning C4018: <: несоответствие типов со знаком и без знака
+d:\research-data\pp\lab8\lab8\lab8\main.cpp(136): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+  lab8.vcxproj -> D:\Research-Data\PP\lab8\lab8\Debug\lab8.exe

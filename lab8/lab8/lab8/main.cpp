@@ -1,4 +1,4 @@
-#include "CBlurImage.h"
+#include "CBlur.h"
 #include "CTask.h"
 #include "CPool.h"
 #include <ctime>
@@ -14,7 +14,6 @@ const int POOL_MODE = 1;
 
 vector<int> GetThreadPriorities(int threadCount)
 {
-	//----------
 	string threadPrioritiesLine = "";
 	string buff = "";
 	vector<string> threadPrioritiesString = {};
@@ -56,7 +55,6 @@ vector<int> GetThreadPriorities(int threadCount)
 		}
 	}
 	return threadPrioritiesInt;
-	//----------
 }
 
 int main(int argc, char* argv[])
@@ -126,7 +124,7 @@ int main(int argc, char* argv[])
 	{
 		for (int i = 0; i < inputImagesPaths.size(); i++)
 		{
-			CBlurImage blurImage(inputImagesPaths.at(i).c_str(), outputImagesPaths.at(i).c_str(), threadCount, coreCount, threadPriorities);
+			CBlur blurImage(inputImagesPaths.at(i).c_str(), outputImagesPaths.at(i).c_str(), threadCount, coreCount, threadPriorities);
 			blurImage.StarBluring();
 		}
 	}
@@ -135,7 +133,7 @@ int main(int argc, char* argv[])
 		vector<CTask*> tasks;
 		for (int i = 0; i < inputImagesPaths.size(); i++)
 		{
-			CBlurImage blurImage(inputImagesPaths.at(i).c_str(), outputImagesPaths.at(i).c_str(), threadCount, coreCount, threadPriorities);
+			CBlur blurImage(inputImagesPaths.at(i).c_str(), outputImagesPaths.at(i).c_str(), threadCount, coreCount, threadPriorities);
 			tasks.push_back(new CTask(blurImage));
 		}
 		CPool pool(tasks, threadCount);
