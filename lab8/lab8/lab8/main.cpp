@@ -5,9 +5,9 @@
 #include <string>
 #include <sstream>
 #include <filesystem>
-#include <experimental/filesystem>
 
 using namespace std;
+using namespace experimental;
 
 const int DEFAULT_MODE = 0;
 const int POOL_MODE = 1;
@@ -99,23 +99,23 @@ int main(int argc, char* argv[])
 
 	vector<int> threadPriorities = GetThreadPriorities(threadCount);
 
-	if (!experimental::filesystem::exists(inputImageDirectory)) {
+	if (!filesystem::exists(inputImageDirectory)) {
 		cout << "Directory of input images does not exist" << endl;
 		return 1;
 	}
 
-	if (!experimental::filesystem::exists(outputImageDirectory)) {
-		experimental::filesystem::create_directories(outputImageDirectory);
+	if (!filesystem::exists(outputImageDirectory)) {
+		filesystem::create_directories(outputImageDirectory);
 	}
 
 	vector<string> inputImagesPaths;
 	vector<string> outputImagesPaths;
-	for (const auto& file : experimental::filesystem::directory_iterator(inputImageDirectory)) {
+	for (const auto& file : filesystem::directory_iterator(inputImageDirectory)) {
 		auto path = file.path();
 		if (path.extension() == ".bmp") {
 			inputImagesPaths.push_back(path.string());
 			string outputImagePath = outputImageDirectory;
-			outputImagePath += "/blured_" + path.stem().string() + ".bmp";
+			outputImagePath += path.stem().string() + ".bmp";
 			outputImagesPaths.push_back(outputImagePath);
 		}
 	}
