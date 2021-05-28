@@ -4,7 +4,7 @@
 CLogBuffer::CLogBuffer(mutex& mtx)
 	: m_mtx(mtx), m_logList(CLogList()), m_fileNum(1)
 {
-	overflowEvent = CreateEvent(nullptr, true, false, "overflowEvent");
+	overflowEvent = CreateEvent(nullptr, true, false, L"overflowEvent");
 	StartOverflowThread();
 }
 

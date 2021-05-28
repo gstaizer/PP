@@ -1,4 +1,6 @@
-﻿  CBlur.cpp
+﻿  EasyBMP.cpp
+D:\Research-Data\PP\lab6\easyBMP\EasyBMP.cpp(994,13): warning C4101: ZeroWORD: неиспользованная локальная переменная
+  CBlur.cpp
 D:\Research-Data\PP\lab6\lab6\lab6\CBlur.cpp(78,20): warning C4018: <: несоответствие типов со знаком и без знака
 D:\Research-Data\PP\lab6\lab6\lab6\CBlur.cpp(93,20): warning C4018: <: несоответствие типов со знаком и без знака
   CLogBuffer.cpp
