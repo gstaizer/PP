@@ -1,6 +1,12 @@
-﻿  main.cpp
-d:\research-data\pp\lab8\lab8\lab8\main.cpp(34): warning C4018: <: несоответствие типов со знаком и без знака
-d:\research-data\pp\lab8\lab8\lab8\main.cpp(49): warning C4018: <: несоответствие типов со знаком и без знака
-d:\research-data\pp\lab8\lab8\lab8\main.cpp(125): warning C4018: <: несоответствие типов со знаком и без знака
-d:\research-data\pp\lab8\lab8\lab8\main.cpp(134): warning C4018: <: несоответствие типов со знаком и без знака
-  lab8.vcxproj -> D:\Research-Data\PP\lab8\lab8\Debug\lab8.exe
+﻿  EasyBMP.cpp
+c:\repositories\pp\lab8\easybmp\easybmp.cpp(994): warning C4101: ZeroWORD: неиспользованная локальная переменная
+  CBlur.cpp
+  CPool.cpp
+  CTask.cpp
+  main.cpp
+c:\repositories\pp\lab8\lab8\lab8\main.cpp(34): warning C4018: <: несоответствие типов со знаком и без знака
+c:\repositories\pp\lab8\lab8\lab8\main.cpp(49): warning C4018: <: несоответствие типов со знаком и без знака
+c:\repositories\pp\lab8\lab8\lab8\main.cpp(125): warning C4018: <: несоответствие типов со знаком и без знака
+c:\repositories\pp\lab8\lab8\lab8\main.cpp(134): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+  lab8.vcxproj -> C:\Repositories\PP\lab8\lab8\Debug\lab8.exe
