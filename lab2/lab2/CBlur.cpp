@@ -6,34 +6,10 @@ using namespace std;
 
 void BlurProc(ThreadInfo* thread, int startBlur, int endBlur)
 {
-	// horizontal blur
 	int blurRadius = 2;
 	int w = thread->inputImage.TellWidth();
 	int h = thread->inputImage.TellHeight();
-	for (int i = 2; i < w - 2; i++)
-	{
-		for (int j = startBlur; j < endBlur; j++)
-		{
-			RGBApixel p1 = thread->inputImage.GetPixel(i - 2, j);
-			RGBApixel p2 = thread->inputImage.GetPixel(i - 1, j);
-			RGBApixel p3 = thread->inputImage.GetPixel(i, j);
-			RGBApixel p4 = thread->inputImage.GetPixel(i + 1, j);
-			RGBApixel p5 = thread->inputImage.GetPixel(i + 2, j);
 
-			byte bR = (byte)((p1.Red + p2.Red + p3.Red + p4.Red + p5.Red) / 5);
-			byte bG = (byte)((p1.Green + p2.Green + p3.Green + p4.Green + p5.Green) / 5);
-			byte bB = (byte)((p1.Blue + p2.Blue + p3.Blue + p4.Blue + p5.Blue) / 5);
-
-			RGBApixel bluredPixel;
-			bluredPixel.Red = bR;
-			bluredPixel.Green = bG;
-			bluredPixel.Blue = bB;
-
-			thread->outputImage->SetPixel(i, j, bluredPixel);
-		}
-	}
-
-	//vertical blur
 	for (int i = 0; i < w; i++)
 	{
 		for (int j = startBlur + 2; j < endBlur - 2; j++)
